@@ -1,0 +1,16 @@
+numpy>=1.13.3
+pandas
+matplotlib
+seaborn
+jupyter
+ipywidgets
+IPython
+tqdm
+scipy
+gdal
+geopandas
+rasterio>=1.0a12
+shapely
+fiona
+affine
+rasterstats
