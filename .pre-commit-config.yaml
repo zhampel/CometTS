@@ -3,25 +3,25 @@ repos:
     rev: v2.1.0
     hooks:
     -   id: trailing-whitespace
-        files: 'commetts/*'
+        files: 'cometts/*'
     -   id: end-of-file-fixer
-        files: 'commetts/*'
+        files: 'cometts/*'
     -   id: check-docstring-first
-        files: 'commetts/*'
+        files: 'cometts/*'
     -   id: check-json
-        files: 'commetts/*'
+        files: 'cometts/*'
     -   id: check-added-large-files
-        files: 'commetts/*'
+        files: 'cometts/*'
     -   id: check-yaml
         files: 'scripts/*'
     -   id: requirements-txt-fixer
     -   id: flake8
-        files: 'commetts/*'
+        files: 'cometts/*'
 -   repo: https://github.com/pre-commit/mirrors-autopep8
     rev: v1.4.3
     hooks:
     -   id: autopep8
-        files: 'commetts/*'
+        files: 'cometts/*'
 -   repo: https://github.com/pre-commit/pre-commit
     rev: v1.13.0
     hooks:
@@ -30,5 +30,5 @@ repos:
     rev: v1.3.4
     hooks:
     -   id: reorder-python-imports
-        files: 'commetts/*'
+        files: 'cometts/*'
         language_version: python3.6
