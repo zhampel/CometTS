@@ -1,0 +1,42 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.1.0
+    hooks:
+    -   id: trailing-whitespace
+        files: 'commetts/*'
+        files: 'scripts/*'
+    -   id: end-of-file-fixer
+        files: 'commetts/*'
+        files: 'scripts/*'
+    -   id: check-docstring-first
+        files: 'commetts/*'
+        files: 'scripts/*'
+    -   id: check-json
+        files: 'commetts/*'
+        files: 'scripts/*'
+    -   id: check-added-large-files
+        files: 'commetts/*'
+        files: 'scripts/*'
+    -   id: check-yaml
+        files: 'scripts/*'
+    -   id: requirements-txt-fixer
+    -   id: flake8
+        files: 'commetts/*'
+        files: 'scripts/*'
+-   repo: https://github.com/pre-commit/mirrors-autopep8
+    rev: v1.4.3
+    hooks:
+    -   id: autopep8
+        files: 'commetts/*'
+        files: 'scripts/*'
+-   repo: https://github.com/pre-commit/pre-commit
+    rev: v1.13.0
+    hooks:
+    -   id: validate_manifest
+-   repo: https://github.com/asottile/reorder_python_imports
+    rev: v1.3.4
+    hooks:
+    -   id: reorder-python-imports
+        files: 'commetts/*'
+        files: 'scripts/*'
+        language_version: python3.6
