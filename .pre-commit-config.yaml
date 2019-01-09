@@ -3,13 +3,9 @@ repos:
     rev: v2.1.0
     hooks:
     -   id: trailing-whitespace
-        files: 'cometts/*'
     -   id: end-of-file-fixer
-        files: 'cometts/*'
     -   id: check-docstring-first
-        files: 'cometts/*'
     -   id: check-json
-        files: 'cometts/*'
     -   id: check-added-large-files
         files: 'cometts/*'
     -   id: check-yaml
