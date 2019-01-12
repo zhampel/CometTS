@@ -1,4 +1,4 @@
-import glob.glob as glob
+import glob
 import os
 from fnmatch import fnmatch
 
@@ -173,7 +173,7 @@ def CSV_It(input_dir="", TSdata="S*rade9.tif",
 
     os.chdir(input_dir)
     # Identify all subdirs that contain our raster data
-    input_subdirs = glob('*/')
+    input_subdirs = glob.glob('*/')
     print(len(input_subdirs))
 
     rasterList = []
@@ -181,7 +181,7 @@ def CSV_It(input_dir="", TSdata="S*rade9.tif",
     for directory in tqdm(input_subdirs):
         os.chdir(directory)
         # Find our primary rasters of interest
-        FilePattern = glob(TSdata)
+        FilePattern = glob.glob(TSdata)
         if len(Observations) > 0:
             Observations = [Observations]
             FilePattern = [x for x in FilePattern if not any(
@@ -202,12 +202,12 @@ def CSV_It(input_dir="", TSdata="S*rade9.tif",
                 BandNum = raster[int(BandNum[0]):int(BandNum[1])]
                 # statout[0]['band_num'] = b
             if len(Mask) > 0:
-                mask = glob(Mask)[0]
+                mask = glob.glob(Mask)[0]
                 statout[0]['Mask'] = input_dir+'/'+directory+'/'+mask
             rasterList.append(statout[0])
 
         if len(Observations) > 0:
-            FilePattern = glob(Observations)
+            FilePattern = glob.glob(Observations)
             for raster in FilePattern:
                 statout = [{}]
                 statout[0]['File'] = input_dir+'/'+directory+'/'+raster
@@ -221,7 +221,7 @@ def CSV_It(input_dir="", TSdata="S*rade9.tif",
                 if len(BandNum) > 0:
                     statout[0]['band_num'] = 0
                 if len(Mask) > 0:
-                    mask = glob(Mask)[0]
+                    mask = glob.glob(Mask)[0]
                     statout[0]['Mask'] = input_dir+'/'+directory+'/'+mask
                 rasterList.append(statout[0])
 
@@ -296,7 +296,7 @@ def LS_CSV_It(input_dir="", TSdata="L*.tif",
 
     os.chdir(input_dir)
     # Identify all subdirs that contain our raster data
-    input_subdirs = glob('*/')
+    input_subdirs = glob.glob('*/')
     print(len(input_subdirs))
 
     rasterList = []
@@ -307,7 +307,7 @@ def LS_CSV_It(input_dir="", TSdata="L*.tif",
         # Find our primary rasters of interest
         FilePattern = []
         for item in TSdata:
-            FilePattern.extend(glob(item))
+            FilePattern.extend(glob.glob(item))
         for raster in FilePattern:
             statout = [{}]
             statout[0]['File'] = input_dir+'/'+directory+'/'+raster
@@ -319,7 +319,7 @@ def LS_CSV_It(input_dir="", TSdata="L*.tif",
             statout[0]['obs'] = 0
             statout[0]['TS_Data'] = 1
             if len(Mask) > 0:
-                mask = glob(Mask)[0]
+                mask = glob.glob(Mask)[0]
                 statout[0]['Mask'] = input_dir+'/'+directory+'/'+mask
             rasterList.append(statout[0])
 

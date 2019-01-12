@@ -7,7 +7,7 @@ import pandas as pd
 import seaborn as sns
 from tqdm import tqdm_notebook as tqdm
 
-from cometts import interpolate_gaps
+from .utils import interpolate_gaps
 
 sns.set(color_codes=True)
 
