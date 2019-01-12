@@ -4,6 +4,7 @@
 .DS_Store
 *.ipynb_checkpoints
 *.zip
+*csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
