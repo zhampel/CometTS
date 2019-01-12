@@ -1,4 +1,8 @@
 repos:
+-   repo: https://github.com/pre-commit/mirrors-autopep8
+    rev: v1.4.3
+    hooks:
+    -   id: autopep8
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v2.1.0
     hooks:
@@ -10,10 +14,7 @@ repos:
     -   id: check-yaml
     -   id: requirements-txt-fixer
     -   id: flake8
--   repo: https://github.com/pre-commit/mirrors-autopep8
-    rev: v1.4.3
-    hooks:
-    -   id: autopep8
+        exclude: cometts/__init__.py
 -   repo: https://github.com/pre-commit/pre-commit
     rev: v1.13.0
     hooks:
